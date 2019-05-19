@@ -1,0 +1,19 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: weather-collection-microservice
+  redis:
+    password: Sagreen2017
+    host: 139.196.238.115
+    database: 1
+logging:
+  level:
+    com.imooc.spring.cloud.weather.collection.client.WeatherOpenClient: debug
+feign:
+  hystrix:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
