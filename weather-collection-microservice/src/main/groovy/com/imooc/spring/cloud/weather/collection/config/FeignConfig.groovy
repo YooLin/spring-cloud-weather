@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Configuration
  * @author linyicong* @since 2019-05-19
  */
 @Configuration
-class WeatherOpenClientConfig {
+class FeignConfig {
     @Bean
-    Logger.Level weatherOpenClientLoggerLevel() {
+    Logger.Level feignLoggerLevel() {
         return Logger.Level.FULL
     }
 }
