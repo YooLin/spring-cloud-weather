@@ -7,7 +7,7 @@ import groovy.transform.ToString
  * @author linyicong* @since 2019-05-19
  */
 @ToString
-class ForecastWeatherDTO {
+class ForecastWeatherDTO implements Serializable {
     @JsonProperty(value = "date")
     String dateDesc
 

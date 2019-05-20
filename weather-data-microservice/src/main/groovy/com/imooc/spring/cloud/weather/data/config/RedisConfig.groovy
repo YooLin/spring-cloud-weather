@@ -1,10 +1,10 @@
-package com.imooc.spring.cloud.weather.collection.config
+package com.imooc.spring.cloud.weather.data.config
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect
 import com.fasterxml.jackson.annotation.PropertyAccessor
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.common.collect.ImmutableMap
-import com.imooc.spring.cloud.weather.collection.constant.CacheConstants
+import com.imooc.spring.cloud.weather.data.constant.CacheConstants
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.cache.CacheManager
 import org.springframework.context.annotation.Bean

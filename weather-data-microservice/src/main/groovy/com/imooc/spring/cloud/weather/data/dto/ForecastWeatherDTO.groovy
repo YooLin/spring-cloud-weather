@@ -1,4 +1,4 @@
-package com.imooc.spring.cloud.weather.collection.dto
+package com.imooc.spring.cloud.weather.data.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import groovy.transform.ToString
@@ -7,21 +7,21 @@ import groovy.transform.ToString
  * @author linyicong* @since 2019-05-19
  */
 @ToString
-class YesterdayWeatherDTO implements Serializable {
+class ForecastWeatherDTO implements Serializable {
     @JsonProperty(value = "date")
     String dateDesc
 
     @JsonProperty(value = "high")
     String highTemperatureDesc
 
-    @JsonProperty(value = "fx")
-    String windDirection
+    @JsonProperty(value = "fengli")
+    String windPower
 
     @JsonProperty(value = "low")
     String lowTemperatureDesc
 
-    @JsonProperty(value = "fl")
-    String windPower
+    @JsonProperty(value = "fengxiang")
+    String windDirection
 
     @JsonProperty(value = "type")
     String weather

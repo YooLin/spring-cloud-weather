@@ -5,19 +5,25 @@ import com.imooc.spring.cloud.weather.collection.constant.CacheConstants
 import com.imooc.spring.cloud.weather.collection.dto.WeatherResponseDTO
 import com.imooc.spring.cloud.weather.collection.service.WeatherCollectionService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.cache.annotation.CacheConfig
 import org.springframework.cache.annotation.CachePut
+import org.springframework.cache.annotation.Caching
 import org.springframework.stereotype.Service
 
 /**
  * @author linyicong* @since 2019-05-19
  */
 @Service
+@CacheConfig(cacheNames = CacheConstants.CITY_WEATHER_KEY)
 class WeatherCollectionServiceImpl implements WeatherCollectionService {
     @Autowired
     WeatherOpenClient weatherOpenClient
 
     @Override
-    @CachePut(cacheNames = CacheConstants.CITY_WEATHER_KEY, key = "#cityId", unless = "#result == null")
+    @Caching(put = [
+            @CachePut(key = "#cityId", unless = "#result == null"),
+            @CachePut(key = "#result.data.city", unless = "#result == null")
+    ])
     WeatherResponseDTO cacheCityWeatherData(String cityId) {
         return this.weatherOpenClient.getByCityId(cityId)
     }
