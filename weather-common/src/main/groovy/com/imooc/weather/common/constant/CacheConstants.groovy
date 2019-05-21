@@ -1,4 +1,4 @@
-package com.imooc.spring.cloud.weather.collection.constant
+package com.imooc.weather.common.constant
 
 /**
  * @author linyicong* @since 2019-05-19

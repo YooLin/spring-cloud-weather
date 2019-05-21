@@ -1,12 +1,8 @@
 package com.imooc.spring.cloud.weather.data.service.impl
 
-import com.imooc.spring.cloud.weather.data.client.WeatherOpenClient
-import com.imooc.spring.cloud.weather.data.constant.CacheConstants
-import com.imooc.spring.cloud.weather.data.dto.WeatherResponseDTO
 import com.imooc.spring.cloud.weather.data.service.IWeatherDataService
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Autowired
+import com.imooc.weather.common.constant.CacheConstants
+import com.imooc.weather.common.dto.WeatherResponseDTO
 import org.springframework.cache.annotation.CacheConfig
 import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Service
@@ -17,20 +13,16 @@ import org.springframework.stereotype.Service
 @Service
 @CacheConfig(cacheNames = CacheConstants.CITY_WEATHER_KEY)
 class WeatherDataServiceImpl implements IWeatherDataService {
-    private static final Logger logger = LoggerFactory.getLogger(WeatherDataServiceImpl)
-
-    @Autowired
-    private WeatherOpenClient weatherOpenClient
 
     @Override
-    @Cacheable(key = "#cityId")
+    @Cacheable(key = "#cityId", unless = "#result == null")
     WeatherResponseDTO getByCityId(String cityId) {
-        return this.weatherOpenClient.getByCityId(cityId)
+        throw new RuntimeException("getByCityId cache missed! cityId=${cityId}")
     }
 
     @Override
-    @Cacheable(key = "#cityName", condition = "false")
+    @Cacheable(key = "#cityName", unless = "#result == null")
     WeatherResponseDTO getByCityName(String cityName) {
-        return this.weatherOpenClient.getByCityName(cityName)
+        throw new RuntimeException("getByCityName cache missed! cityName=${cityName}")
     }
 }

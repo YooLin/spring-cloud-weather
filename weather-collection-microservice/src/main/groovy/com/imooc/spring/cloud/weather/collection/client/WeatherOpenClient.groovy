@@ -2,7 +2,7 @@ package com.imooc.spring.cloud.weather.collection.client
 
 import com.imooc.spring.cloud.weather.collection.client.fallback.WeatherOpenClientFallbackFactory
 import com.imooc.spring.cloud.weather.collection.config.FeignConfig
-import com.imooc.spring.cloud.weather.collection.dto.WeatherResponseDTO
+import com.imooc.weather.common.dto.WeatherResponseDTO
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam

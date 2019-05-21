@@ -1,4 +1,4 @@
-package com.imooc.spring.cloud.weather.data.dto
+package com.imooc.weather.common.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import groovy.transform.ToString
