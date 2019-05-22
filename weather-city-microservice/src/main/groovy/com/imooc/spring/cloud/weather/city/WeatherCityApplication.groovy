@@ -5,7 +5,6 @@ import org.springframework.cloud.client.SpringCloudApplication
 import org.springframework.cloud.openfeign.EnableFeignClients
 
 /**
- * todo http://mobile.weather.com.cn/js/citylist.xml
  * @author yicong* @since 2019-05-22 11:57
  */
 @EnableFeignClients

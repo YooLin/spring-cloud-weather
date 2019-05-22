@@ -2,7 +2,7 @@ package com.imooc.spring.cloud.weather.city.client
 
 import com.imooc.spring.cloud.weather.city.client.fallback.WeatherCityOpenClientFallbackFactory
 import com.imooc.spring.cloud.weather.city.config.FeignConfig
-import com.imooc.spring.cloud.weather.city.dto.CityListDTO
+import com.imooc.spring.cloud.weather.city.dto.CityInfoDTO
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 
@@ -12,5 +12,5 @@ import org.springframework.web.bind.annotation.GetMapping
 @FeignClient(name = "weather-city-open-client", url = "http://mobile.weather.com.cn", configuration = FeignConfig, fallbackFactory = WeatherCityOpenClientFallbackFactory)
 interface WeatherCityOpenClient {
     @GetMapping(value = "js/citylist.xml")
-    CityListDTO getCityList()
+    CityInfoDTO getAllCityList()
 }

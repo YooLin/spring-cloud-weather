@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlElement
 import javax.xml.bind.annotation.XmlRootElement
 
 /**
- * @author yicong* @since 2019-05-22 12:11
+ * @author linyicong* @since 2019-05-22
  */
 @ToString
-@XmlRootElement(name = "c")
+@XmlRootElement(name = "xml")
 @XmlAccessorType(XmlAccessType.FIELD)
-class CityListDTO {
-    @XmlElement(name = "d")
-    List<CityDTO> data
+class CityInfoDTO {
+    @XmlElement(name = "c")
+    CityListDTO cityListDTO
 }

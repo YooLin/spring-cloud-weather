@@ -2,6 +2,9 @@ package com.imooc.spring.cloud.weather.city.dto
 
 import groovy.transform.ToString
 
+import javax.xml.bind.annotation.XmlAccessType
+import javax.xml.bind.annotation.XmlAccessorType
+import javax.xml.bind.annotation.XmlAttribute
 import javax.xml.bind.annotation.XmlElement
 import javax.xml.bind.annotation.XmlRootElement
 
@@ -10,13 +13,14 @@ import javax.xml.bind.annotation.XmlRootElement
  */
 @ToString
 @XmlRootElement(name = "d")
+@XmlAccessorType(XmlAccessType.FIELD)
 class CityDTO {
-    @XmlElement(name = "d1")
+    @XmlAttribute(name = "d1")
     String cityCode
-    @XmlElement(name = "d2")
+    @XmlAttribute(name = "d2")
     String cityName
-    @XmlElement(name = "d3")
+    @XmlAttribute(name = "d3")
     String cityEnglishName
-    @XmlElement(name = "d4")
+    @XmlAttribute(name = "d4")
     String provinceName
 }

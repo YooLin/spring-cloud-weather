@@ -13,3 +13,23 @@ feign:
     enabled: true
   httpclient:
     enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 15000
+        readTimeout: 20000
+hystrix:
+  threadpool:
+    default:
+      coreSize: 500
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold: 800
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  eager-load:
+    enabled: true

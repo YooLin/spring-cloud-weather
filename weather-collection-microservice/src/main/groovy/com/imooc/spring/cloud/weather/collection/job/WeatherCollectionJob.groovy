@@ -22,6 +22,7 @@ class WeatherCollectionJob {
     void syncWeatherData2Cache() {
         logger.info("sync weather data to cache begin!")
 
+        // todo use weather city client
         def cityIdList = Lists.newArrayList("101010100")
         cityIdList.each { this.weatherCollectionService.cacheCityWeatherData(it) }
 

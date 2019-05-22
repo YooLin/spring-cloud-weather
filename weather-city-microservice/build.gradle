@@ -22,7 +22,7 @@ repositories {
 ext {
     set('springCloudVersion', "Greenwich.SR1")
 }
-
+// 使用 jetcache
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-security'

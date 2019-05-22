@@ -1,0 +1,3 @@
+rootProject.name = 'spring-cloud-weather'
+include 'weather-city-client'
+include 'weather-data-client'

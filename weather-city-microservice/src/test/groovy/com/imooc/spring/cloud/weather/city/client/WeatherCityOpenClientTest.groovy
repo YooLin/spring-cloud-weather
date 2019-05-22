@@ -1,7 +1,7 @@
 package com.imooc.spring.cloud.weather.city.client
 
 import com.imooc.spring.cloud.weather.city.WeatherCityApplicationTest
-import com.imooc.spring.cloud.weather.city.dto.CityListDTO
+import com.imooc.spring.cloud.weather.city.dto.CityInfoDTO
 import org.junit.Test
 import org.springframework.beans.factory.annotation.Autowired
 
@@ -14,9 +14,10 @@ class WeatherCityOpenClientTest extends WeatherCityApplicationTest {
 
     @Test
     void testGetCityList() {
-        CityListDTO cityList = this.weatherCityOpenClient.getCityList()
-        assert cityList != null
-        assert cityList.cityDTOList.size() > 0
+        CityInfoDTO cityInfoDTO = this.weatherCityOpenClient.getCityList()
+
+        assert cityInfoDTO != null
+        assert cityInfoDTO.cityListDTO.data.size() > 0
     }
 
 }
