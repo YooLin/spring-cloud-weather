@@ -1,5 +1,8 @@
 package com.imooc.spring.cloud.weather.report.controller
 
+import com.imooc.spring.cloud.weather.common.dto.CityDTO
+import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
+import com.imooc.spring.cloud.weather.report.client.WeatherCityClient
 import com.imooc.spring.cloud.weather.report.service.IWeatherReportService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
@@ -22,13 +25,13 @@ class WeatherReportController {
 
     @GetMapping("cityId/{cityId}")
     String report(@PathVariable String cityId, Model model) {
-        List<City> cityList = null
+        List<CityDTO> cityList = this.weatherCityClient.getCityList()
+        WeatherResponseDTO weatherReportDTO = this.weatherReportService.getWeatherDataByCityId(cityId)
 
-        this.weatherReportService.getWeatherDataByCityId(cityId)
         model.addAttribute("title", "老卫的天气预报")
         model.addAttribute("cityId", cityId)
         model.addAttribute("cityList", cityList)
-        model.addAttribute("report",)
+        model.addAttribute("report", weatherReportDTO)
         return "weather/report"
     }
 }

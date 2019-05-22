@@ -1,6 +1,6 @@
 package com.imooc.spring.cloud.weather.collection.service.impl
 
-import com.imooc.spring.cloud.weather.collection.client.WeatherOpenClient
+import com.imooc.spring.cloud.weather.collection.client.WeatherDataOpenClient
 import com.imooc.spring.cloud.weather.collection.service.WeatherCollectionService
 import com.imooc.spring.cloud.weather.common.constant.CacheConstants
 import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service
 @CacheConfig(cacheNames = CacheConstants.CITY_WEATHER_KEY)
 class WeatherCollectionServiceImpl implements WeatherCollectionService {
     @Autowired
-    WeatherOpenClient weatherOpenClient
+    WeatherDataOpenClient weatherOpenClient
 
     @Override
     @Caching(put = [

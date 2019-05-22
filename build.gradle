@@ -30,26 +30,26 @@ allprojects {
         }
     }
 }
-
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-cache'
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
-    implementation 'org.springframework.boot:spring-boot-starter-quartz'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-webflux'
-    implementation 'org.codehaus.groovy:groovy'
-    implementation 'org.springframework.cloud:spring-cloud-starter-consul-config'
-    implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
-    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-turbine'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'io.projectreactor:reactor-test'
-    testImplementation 'org.springframework.security:spring-security-test'
-}
+//
+//dependencies {
+//    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+//    implementation 'org.springframework.boot:spring-boot-starter-cache'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
+//    implementation 'org.springframework.boot:spring-boot-starter-quartz'
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+//    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+//    implementation 'org.codehaus.groovy:groovy'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-consul-config'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-ribbon'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-turbine'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+//    compileOnly 'org.projectlombok:lombok'
+//    annotationProcessor 'org.projectlombok:lombok'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    testImplementation 'io.projectreactor:reactor-test'
+//    testImplementation 'org.springframework.security:spring-security-test'
+//}

@@ -1,5 +1,7 @@
+rootProject.name = 'spring-cloud-weather'
 include 'weather-collection-microservice'
 include 'weather-data-microservice'
 include 'weather-common'
 include 'weather-report-microservice'
+include 'weather-city-microservice'
 

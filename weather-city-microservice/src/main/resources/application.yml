@@ -1,0 +1,15 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: weather-city-microservice
+logging:
+  level:
+    com.imooc.spring.cloud.weather.city.client.WeatherCityOpenClient: debug
+feign:
+  hystrix:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false

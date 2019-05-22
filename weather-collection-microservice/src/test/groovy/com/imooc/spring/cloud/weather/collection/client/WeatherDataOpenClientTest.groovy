@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired
 /**
  * @author linyicong* @since 2019-05-19
  */
-class WeatherOpenClientTest extends WeatherCollectionApplicationTest {
+class WeatherDataOpenClientTest extends WeatherCollectionApplicationTest {
     @Autowired
-    private final WeatherOpenClient weatherOpenClient
+    private final WeatherDataOpenClient weatherOpenClient
 
     @Test
     void testGetByCityId() {
