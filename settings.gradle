@@ -1,3 +1,5 @@
 include 'weather-collection-microservice'
 include 'weather-data-microservice'
 include 'weather-common'
+include 'weather-report-microservice'
+

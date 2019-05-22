@@ -1,8 +1,8 @@
 package com.imooc.spring.cloud.weather.data.service.impl
 
 import com.imooc.spring.cloud.weather.data.service.IWeatherDataService
-import com.imooc.weather.common.constant.CacheConstants
-import com.imooc.weather.common.dto.WeatherResponseDTO
+import com.imooc.spring.cloud.weather.common.constant.CacheConstants
+import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
 import org.springframework.cache.annotation.CacheConfig
 import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Service

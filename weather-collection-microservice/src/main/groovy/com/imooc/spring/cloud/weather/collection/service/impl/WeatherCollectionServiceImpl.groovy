@@ -2,8 +2,8 @@ package com.imooc.spring.cloud.weather.collection.service.impl
 
 import com.imooc.spring.cloud.weather.collection.client.WeatherOpenClient
 import com.imooc.spring.cloud.weather.collection.service.WeatherCollectionService
-import com.imooc.weather.common.constant.CacheConstants
-import com.imooc.weather.common.dto.WeatherResponseDTO
+import com.imooc.spring.cloud.weather.common.constant.CacheConstants
+import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.cache.annotation.CacheConfig
 import org.springframework.cache.annotation.CachePut
