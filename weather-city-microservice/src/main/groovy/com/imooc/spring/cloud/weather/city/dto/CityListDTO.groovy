@@ -1,5 +1,6 @@
 package com.imooc.spring.cloud.weather.city.dto
 
+import com.imooc.spring.cloud.city.dto.CityDTO
 import groovy.transform.ToString
 
 import javax.xml.bind.annotation.XmlAccessType

@@ -1,6 +1,7 @@
 package com.imooc.spring.cloud.weather.city.service
 
-import com.imooc.spring.cloud.weather.city.dto.CityDTO
+import com.imooc.spring.cloud.city.dto.CityDTO
+
 
 /**
  * @author linyicong* @since 2019-05-23

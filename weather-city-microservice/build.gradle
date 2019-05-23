@@ -39,6 +39,7 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 
     compile project(':weather-common')
+    compile project(':weather-client:weather-city-client')
 }
 
 dependencyManagement {
