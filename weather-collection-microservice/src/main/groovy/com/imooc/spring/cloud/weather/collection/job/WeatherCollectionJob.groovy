@@ -1,6 +1,7 @@
 package com.imooc.spring.cloud.weather.collection.job
 
-import com.google.common.collect.Lists
+
+import com.imooc.spring.cloud.city.client.WeatherCityClient
 import com.imooc.spring.cloud.weather.collection.service.WeatherCollectionService
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -16,15 +17,16 @@ class WeatherCollectionJob {
     private static final Logger logger = LoggerFactory.getLogger(WeatherCollectionJob)
 
     @Autowired
-    WeatherCollectionService weatherCollectionService
+    private WeatherCollectionService weatherCollectionService
+    @Autowired
+    private WeatherCityClient weatherCityClient
 
     @Scheduled(fixedRate = 1800000L)
     void syncWeatherData2Cache() {
         logger.info("sync weather data to cache begin!")
 
-        // todo use weather city client
-        def cityIdList = Lists.newArrayList("101010100")
-        cityIdList.each { this.weatherCollectionService.cacheCityWeatherData(it) }
+        def cityIdList = this.weatherCityClient.getAllCityList()
+        cityIdList.each { this.weatherCollectionService.cacheCityWeatherData(it.cityId) }
 
         logger.info("sync weather data to cache end!")
     }

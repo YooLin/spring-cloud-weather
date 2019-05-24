@@ -1,8 +1,7 @@
 package com.imooc.spring.cloud.weather.data.controller
 
-
-import com.imooc.spring.cloud.weather.data.service.IWeatherDataService
 import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
+import com.imooc.spring.cloud.weather.data.service.IWeatherDataService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

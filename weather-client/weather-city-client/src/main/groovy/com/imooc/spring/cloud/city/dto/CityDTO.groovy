@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 class CityDTO {
     @XmlAttribute(name = "d1")
-    String cityCode
+    String cityId
     @XmlAttribute(name = "d2")
     String cityName
     @XmlAttribute(name = "d3")
