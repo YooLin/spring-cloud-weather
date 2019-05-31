@@ -24,7 +24,7 @@ class WeatherCollectionServiceImpl implements WeatherCollectionService {
             @CachePut(key = "#cityId", unless = "#result == null"),
             @CachePut(key = "#result.data.city", unless = "#result == null")
     ])
-    WeatherResponseDTO cacheCityWeatherData(String cityId) {
+    WeatherResponseDTO saveCityWeatherData(String cityId) {
         return this.weatherOpenClient.getByCityId(cityId)
     }
 }

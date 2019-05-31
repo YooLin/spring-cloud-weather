@@ -1,15 +1,13 @@
 plugins {
     id 'groovy'
+    id 'org.springframework.boot'
 }
 
 group 'com.imooc'
 version '0.0.1-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.11'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations'
 }

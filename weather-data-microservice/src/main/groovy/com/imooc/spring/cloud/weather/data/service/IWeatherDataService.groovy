@@ -1,6 +1,5 @@
 package com.imooc.spring.cloud.weather.data.service
 
-
 import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
 
 /**
