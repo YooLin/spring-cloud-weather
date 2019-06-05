@@ -9,4 +9,7 @@ include 'weather-client:weather-city-client'
 include 'weather-client:weather-data-client'
 findProject(':weather-client:weather-city-client')?.name = 'weather-city-client'
 findProject(':weather-client:weather-data-client')?.name = 'weather-data-client'
+include 'weather-gateway'
+include 'weather-client:weather-gateway-client'
+findProject(':weather-client:weather-gateway-client')?.name = 'weather-gateway-client'
 

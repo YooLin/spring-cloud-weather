@@ -1,4 +1,4 @@
-package com.imooc.spring.cloud.city.dto
+package com.imooc.spring.cloud.weather.common.dto
 
 import groovy.transform.ToString
 

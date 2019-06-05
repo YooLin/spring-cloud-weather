@@ -14,7 +14,7 @@ class WeatherCityOpenClientTest extends WeatherCityApplicationTest {
 
     @Test
     void testGetCityList() {
-        CityInfoDTO cityInfoDTO = this.weatherCityOpenClient.getCityList()
+        CityInfoDTO cityInfoDTO = this.weatherCityOpenClient.getAllCityList()
 
         assert cityInfoDTO != null
         assert cityInfoDTO.cityListDTO.data.size() > 0

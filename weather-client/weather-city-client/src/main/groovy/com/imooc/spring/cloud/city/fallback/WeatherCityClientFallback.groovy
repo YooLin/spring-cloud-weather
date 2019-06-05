@@ -1,7 +1,7 @@
 package com.imooc.spring.cloud.city.fallback
 
 import com.imooc.spring.cloud.city.client.WeatherCityClient
-import com.imooc.spring.cloud.city.dto.CityDTO
+import com.imooc.spring.cloud.weather.common.dto.CityDTO
 
 /**
  * @author linyicong* @since 2019-05-19

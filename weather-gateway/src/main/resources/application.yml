@@ -1,0 +1,19 @@
+server:
+  port: 7004
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: weather-data-microservice
+          uri: lb://weather-data-microservice
+          predicates:
+            - Path=/weather/data/**
+        - id: weather-city-microservice
+          uri: lb://weather-city-microservice
+          predicates:
+            - Path=/weather/city/**
+  application:
+    name: weather-gateway

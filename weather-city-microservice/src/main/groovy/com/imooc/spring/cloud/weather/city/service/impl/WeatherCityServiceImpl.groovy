@@ -1,8 +1,8 @@
 package com.imooc.spring.cloud.weather.city.service.impl
 
+
 import com.imooc.spring.cloud.city.dto.CityDTO
 import com.imooc.spring.cloud.weather.city.client.WeatherCityOpenClient
-
 import com.imooc.spring.cloud.weather.city.dto.CityInfoDTO
 import com.imooc.spring.cloud.weather.city.service.IWeatherCityService
 import org.springframework.beans.factory.annotation.Autowired

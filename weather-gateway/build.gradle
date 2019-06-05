@@ -22,24 +22,23 @@ repositories {
 ext {
     set('springCloudVersion', "Greenwich.SR1")
 }
-// 使用 jetcache
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 //    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+//    implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.codehaus.groovy:groovy'
     implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-    compile group: 'io.github.openfeign', name: 'feign-okhttp'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
     testImplementation 'org.springframework.security:spring-security-test'
 
-    compile project(':weather-client:weather-city-client')
-    compile group: 'com.alicp.jetcache', name: 'jetcache-anno', version: '2.5.12'
+    compile project(':weather-client:weather-data-client')
+    compile project(':weather-common')
 }
 
 dependencyManagement {

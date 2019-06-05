@@ -1,3 +1,4 @@
 rootProject.name = 'weather-client'
 include 'weather-city-client'
 include 'weather-data-client'
+include 'weather-gateway-client'
