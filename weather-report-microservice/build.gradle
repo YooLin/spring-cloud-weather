@@ -21,6 +21,7 @@ repositories {
 
 ext {
     set('springCloudVersion', "Greenwich.SR1")
+    set('nacosVersion', "0.9.0.RELEASE")
 }
 
 dependencies {
@@ -29,7 +30,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.codehaus.groovy:groovy'
-    implementation 'org.springframework.cloud:spring-cloud-starter-consul-discovery'
+    implementation "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:${nacosVersion}"
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     compile group: 'io.github.openfeign', name: 'feign-okhttp'

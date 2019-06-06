@@ -1,6 +1,5 @@
 package com.imooc.spring.cloud.gateway.client
 
-
 import com.imooc.spring.cloud.gateway.fallback.WeatherGatewayClientFallbackFactory
 import com.imooc.spring.cloud.weather.common.dto.CityDTO
 import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
@@ -16,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 @FeignClient(name = "weather-gateway", fallbackFactory = WeatherGatewayClientFallbackFactory)
 interface WeatherGatewayClient {
     @GetMapping("/data/cityName/{cityName}")
-    WeatherResponseDTO getByCityName(@PathVariable String cityName)
+    WeatherResponseDTO getDataByCityName(@PathVariable(value = "cityName") String cityName)
 
     @GetMapping("/data/cityId/{cityId}")
-    WeatherResponseDTO getDataByCityId(@PathVariable String cityId)
+    WeatherResponseDTO getDataByCityId(@PathVariable(value = "cityId") String cityId)
 
     @GetMapping("/city")
     List<CityDTO> getAllCityList()

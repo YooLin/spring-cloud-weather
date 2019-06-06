@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable
  */
 class WeatherGatewayClientFallback implements WeatherGatewayClient {
     @Override
-    WeatherResponseDTO getByCityName(@PathVariable String cityName) {
+    WeatherResponseDTO getDataByCityName(@PathVariable String cityName) {
         return null
     }
 

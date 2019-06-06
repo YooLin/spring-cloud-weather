@@ -30,3 +30,17 @@ hystrix:
 ribbon:
   eager-load:
     enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+---
+spring:
+  profiles: local
+  cloud:
+    nacos:
+      discovery:
+        namespace: 827b9ab9-163e-4816-a657-bc941bca42d6
+        server-addr: 127.0.0.1:8848

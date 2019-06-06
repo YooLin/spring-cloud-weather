@@ -1,10 +1,10 @@
 package com.imooc.spring.cloud.weather.city.service.impl
 
 
-import com.imooc.spring.cloud.city.dto.CityDTO
 import com.imooc.spring.cloud.weather.city.client.WeatherCityOpenClient
 import com.imooc.spring.cloud.weather.city.dto.CityInfoDTO
 import com.imooc.spring.cloud.weather.city.service.IWeatherCityService
+import com.imooc.spring.cloud.weather.common.dto.CityDTO
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
@@ -19,6 +19,7 @@ class WeatherCityServiceImpl implements IWeatherCityService {
     @Override
     List<CityDTO> getAllCityList() {
         CityInfoDTO cityInfoDTO = this.weatherCityOpenClient.getAllCityList()
-        return cityInfoDTO?.cityListDTO?.data
+        List<CityDTO> result = cityInfoDTO?.cityListDTO?.data
+        return result ? result : Collections.<CityDTO> emptyList()
     }
 }

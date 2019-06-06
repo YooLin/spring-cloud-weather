@@ -4,14 +4,12 @@ import com.alicp.jetcache.anno.CachePenetrationProtect
 import com.alicp.jetcache.anno.CacheRefresh
 import com.alicp.jetcache.anno.CacheType
 import com.alicp.jetcache.anno.Cached
-import com.imooc.spring.cloud.city.dto.CityDTO
+import com.imooc.spring.cloud.weather.common.dto.CityDTO
 
 import java.util.concurrent.TimeUnit
 
-
 /**
- * @author linyicong
- * @since 2019-05-23
+ * @author linyicong* @since 2019-05-23
  */
 interface IWeatherCityService {
     /**
