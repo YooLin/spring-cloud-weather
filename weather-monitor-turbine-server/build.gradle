@@ -13,6 +13,7 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+    compile.exclude module: "spring-cloud-starter-netflix-eureka-client"
 }
 
 repositories {
@@ -22,27 +23,18 @@ repositories {
 ext {
     set('springCloudVersion', "Greenwich.SR1")
     set('nacosVersion', "0.9.0.RELEASE")
-    set('jetcacheVersion', "2.5.12")
 }
 
 dependencies {
 //    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-//    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.codehaus.groovy:groovy'
-    implementation "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:${nacosVersion}"
-    implementation 'org.springframework.cloud:spring-cloud-netflix-hystrix-stream'
+    implementation "org.springframework.cloud:spring-cloud-starter-netflix-turbine-stream"
     implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
-    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-    compile 'io.github.openfeign:feign-okhttp'
-    compile "com.alicp.jetcache:jetcache-anno:${jetcacheVersion}"
 
+    implementation "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:${nacosVersion}"
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
     testImplementation 'org.springframework.security:spring-security-test'
-
-    compile project(':weather-client:weather-city-client')
 }
 
 dependencyManagement {

@@ -30,6 +30,8 @@ dependencies {
     implementation 'org.codehaus.groovy:groovy'
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
     implementation "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:${nacosVersion}"
+    implementation 'org.springframework.cloud:spring-cloud-netflix-hystrix-stream'
+    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

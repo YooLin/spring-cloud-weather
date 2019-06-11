@@ -17,7 +17,6 @@ spring:
             - Path=/weather/city/**
   application:
     name: weather-gateway
-
 management:
   endpoints:
     web:
