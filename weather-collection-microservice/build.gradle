@@ -34,8 +34,6 @@ dependencies {
     implementation 'org.codehaus.groovy:groovy'
     implementation "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:${nacosVersion}"
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
-//    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'
-//    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-turbine'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     compile group: 'io.github.openfeign', name: 'feign-okhttp'
     compileOnly 'org.projectlombok:lombok'
