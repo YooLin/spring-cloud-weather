@@ -12,6 +12,3 @@ findProject(':weather-client:weather-data-client')?.name = 'weather-data-client'
 include 'weather-gateway'
 include 'weather-client:weather-gateway-client'
 findProject(':weather-client:weather-gateway-client')?.name = 'weather-gateway-client'
-include 'weather-monitor-dashboard'
-include 'weather-monitor-turbine-server'
-

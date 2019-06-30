@@ -28,6 +28,7 @@ public class WeatherCollectionJob {
         log.info("sync weather data to cache begin!");
 
         List<CityDTO> cityIdList = this.weatherCityClient.getAllCityList();
+
         if (!CollectionUtils.isEmpty(cityIdList)) {
             cityIdList.parallelStream()
                     .map(CityDTO::getCityId)

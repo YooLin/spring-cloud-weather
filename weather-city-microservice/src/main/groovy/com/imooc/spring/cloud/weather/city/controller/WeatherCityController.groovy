@@ -14,7 +14,6 @@ class WeatherCityController implements WeatherCityClient {
     @Autowired
     private IWeatherCityService weatherCityService
 
-    @Override
     List<CityDTO> getAllCityList() {
         return this.weatherCityService.getAllCityList()
     }

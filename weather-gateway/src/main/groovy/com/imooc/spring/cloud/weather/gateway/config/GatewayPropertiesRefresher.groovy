@@ -17,7 +17,8 @@ import org.springframework.context.ApplicationEventPublisherAware
 import org.springframework.stereotype.Component
 
 /**
- * 网关动态路由，监听配置刷新路由
+ * 集成Apollo实现网关的动态路由
+ * 监听网关配置修改，刷新网关路由
  *
  * @author ksewen* @date 2019/5/175:24 PM
  */

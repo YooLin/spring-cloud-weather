@@ -1,5 +1,6 @@
 package com.imooc.spring.cloud.weather.city.listener
 
+
 import com.imooc.spring.cloud.weather.city.service.IWeatherCityService
 import com.imooc.spring.cloud.weather.common.dto.CityDTO
 import org.slf4j.Logger
@@ -19,8 +20,8 @@ class InitCacheListener {
     @Autowired
     private IWeatherCityService weatherCityService
 
-    @EventListener
-    void initCityCache(ApplicationStartedEvent event) {
+    @EventListener(value = ApplicationStartedEvent.class)
+    void initCityCache() {
         logger.info("application started!init city cache begin!")
 
         List<CityDTO> result = this.weatherCityService.getAllCityList()
