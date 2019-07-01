@@ -4,7 +4,7 @@ spring:
   application:
     name: weather-report-microservice
 feign:
-  hystrix:
+  sentinel:
     enabled: true
   okhttp:
     enabled: true
@@ -15,18 +15,7 @@ feign:
       default:
         connectTimeout: 15000
         readTimeout: 20000
-hystrix:
-  threadpool:
-    default:
-      coreSize: 500
-      maxQueueSize: 1000
-      queueSizeRejectionThreshold: 800
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
+
 ribbon:
   eager-load:
     enabled: true
@@ -44,3 +33,7 @@ spring:
       discovery:
         namespace: 827b9ab9-163e-4816-a657-bc941bca42d6
         server-addr: 127.0.0.1:8848
+
+    sentinel:
+      transport:
+        dashboard: localhost:7005

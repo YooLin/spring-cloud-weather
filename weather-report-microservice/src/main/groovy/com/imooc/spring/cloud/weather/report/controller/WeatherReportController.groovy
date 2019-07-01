@@ -1,5 +1,6 @@
 package com.imooc.spring.cloud.weather.report.controller
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource
 import com.google.common.collect.ImmutableMap
 import com.imooc.spring.cloud.gateway.client.WeatherGatewayClient
 import com.imooc.spring.cloud.weather.common.dto.CityDTO
@@ -24,6 +25,7 @@ class WeatherReportController {
     private WeatherGatewayClient weatherGatewayClient
 
     @GetMapping("/cityId/{cityId}")
+    @SentinelResource("getCityWeatherReport")
     ModelAndView getCityWeatherReport(@PathVariable String cityId) {
         List<CityDTO> cityList = this.weatherGatewayClient.getAllCityList()
         WeatherDTO weatherDTO = this.weatherGatewayClient.getDataByCityId(cityId)?.data
@@ -39,6 +41,7 @@ class WeatherReportController {
 
     @GetMapping("/cityName/{cityName}")
     @ResponseBody
+    @SentinelResource("getCityWeatherDTO")
     R<WeatherDTO> getCityWeatherDTO(@PathVariable String cityName) {
         WeatherResponseDTO weatherResponseDTO = this.weatherGatewayClient.getDataByCityName(cityName)
         return R.success(weatherResponseDTO?.data)

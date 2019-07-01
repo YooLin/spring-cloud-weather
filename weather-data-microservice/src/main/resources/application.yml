@@ -11,7 +11,7 @@ logging:
   level:
     com.imooc.spring.cloud.weather.data.client.WeatherOpenClient: debug
 feign:
-  hystrix:
+  sentinel:
     enabled: true
   okhttp:
     enabled: true
@@ -31,3 +31,7 @@ spring:
       discovery:
         namespace: 827b9ab9-163e-4816-a657-bc941bca42d6
         server-addr: 127.0.0.1:8848
+
+    sentinel:
+      transport:
+        dashboard: localhost:7005

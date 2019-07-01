@@ -21,17 +21,16 @@ repositories {
 
 ext {
     set('springCloudVersion', "Greenwich.SR1")
-    set('nacosVersion', "0.9.0.RELEASE")
+    set('springCloudAlibabaVersion', "0.9.0.RELEASE")
     set('apolloVersion', "1.4.0")
 }
 
 dependencies {
-//    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.codehaus.groovy:groovy'
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
-    implementation "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:${nacosVersion}"
-    implementation 'org.springframework.cloud:spring-cloud-netflix-hystrix-stream'
-    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
+    implementation "org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery"
+//    implementation "org.springframework.cloud:spring-cloud-starter-alibaba-sentinel"
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -46,5 +45,6 @@ dependencies {
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        mavenBom "org.springframework.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
     }
 }
