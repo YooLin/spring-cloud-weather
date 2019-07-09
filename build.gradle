@@ -3,6 +3,7 @@ buildscript {
         springBootVersion = '2.1.6.RELEASE'
         springCloudVersion = 'Greenwich.SR1'
         springCloudAlibabaVersion = '0.9.0.RELEASE'
+        javaLanguageLevel = JavaVersion.VERSION_1_8
     }
 
     repositories {
@@ -32,8 +33,8 @@ subprojects {
     apply plugin: 'org.springframework.boot'
     apply plugin: "io.spring.dependency-management"
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = rootProject.javaLanguageLevel
+    targetCompatibility = rootProject.javaLanguageLevel
 
     jar { enabled = true }
     bootJar { enabled = false }
