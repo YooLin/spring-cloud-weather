@@ -18,5 +18,5 @@ dependencies {
     testImplementation 'io.projectreactor:reactor-test'
     testImplementation 'org.springframework.security:spring-security-test'
 
-    compile project(':weather-city-client')
+    compile project(':weather-common')
 }

@@ -12,12 +12,11 @@ import org.springframework.stereotype.Component
  */
 @Component
 class WeatherGatewayClientFallbackFactory implements FallbackFactory<WeatherGatewayClient> {
-    private static final WeatherGatewayClientFallback FALLBACK = new WeatherGatewayClientFallback()
     private static final Logger logger = LoggerFactory.getLogger(WeatherGatewayClientFallbackFactory)
 
     @Override
     WeatherGatewayClient create(Throwable cause) {
-        logger.error("error fallback:", cause)
-        return FALLBACK
+        logger.error("customer fallback error :", cause)
+        return new WeatherGatewayClientFallback()
     }
 }

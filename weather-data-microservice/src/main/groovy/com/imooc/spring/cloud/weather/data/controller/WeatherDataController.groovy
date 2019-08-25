@@ -1,26 +1,29 @@
 package com.imooc.spring.cloud.weather.data.controller
 
-import com.imooc.spring.cloud.data.client.WeatherDataClient
 import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
 import com.imooc.spring.cloud.weather.data.service.IWeatherDataService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 /**
  * @author linyicong* @since 2019-05-20
  */
 @RestController
-class WeatherDataController implements WeatherDataClient {
+@RequestMapping("weather/data")
+class WeatherDataController {
     @Autowired
     private IWeatherDataService weatherDataService
 
-    @Override
-    WeatherResponseDTO getByCityId(String cityId) {
+    @GetMapping("/cityName/{cityName}")
+    WeatherResponseDTO getByCityId(@PathVariable(value = "cityName") String cityId) {
         return this.weatherDataService.getByCityId(cityId)
     }
 
-    @Override
-    WeatherResponseDTO getByCityName(String cityName) {
+    @GetMapping("/cityId/{cityId}")
+    WeatherResponseDTO getByCityName(@PathVariable(value = "cityId") String cityName) {
         return this.weatherDataService.getByCityName(cityName)
     }
 }

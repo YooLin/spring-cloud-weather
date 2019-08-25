@@ -1,6 +1,7 @@
 package com.imooc.spring.cloud.gateway.client
 
 import com.imooc.spring.cloud.gateway.fallback.WeatherGatewayClientFallbackFactory
+import com.imooc.spring.cloud.weather.common.constant.ServiceNameConstants
 import com.imooc.spring.cloud.weather.common.dto.CityDTO
 import com.imooc.spring.cloud.weather.common.dto.WeatherResponseDTO
 import org.springframework.cloud.openfeign.FeignClient
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping
  * @author linyicong* @since 2019-05-24
  */
 @RequestMapping("weather")
-@FeignClient(name = "weather-gateway", fallbackFactory = WeatherGatewayClientFallbackFactory)
+@FeignClient(name = ServiceNameConstants.GATEWAY_SERVICE, fallbackFactory = WeatherGatewayClientFallbackFactory) // 自定义降级
 interface WeatherGatewayClient {
     @GetMapping("/data/cityName/{cityName}")
     WeatherResponseDTO getDataByCityName(@PathVariable(value = "cityName") String cityName)
